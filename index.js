@@ -18,3 +18,10 @@ const driversByRevenue = function (array) {
     return num1.revenue - num2.revenue;
   });
 }
+
+const driversByName = function (array) {
+  let new_array = [...array];
+    return new_array.sort(function (num1, num2) {
+    return num1.revenue - num2.revenue;
+  });
+}
