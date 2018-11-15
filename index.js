@@ -25,3 +25,15 @@ const driversByName = function (array) {
     return num1.name.localeCompare(num2.name);
   });
 }
+const total = function (agg, el, i, arr) {
+  if (i === arr.length - 1) {
+    return agg.totalPrice + el.revenue;
+  }
+  return {
+    totalPrice: agg.totalPrice + el.revenue
+  };
+};
+
+const totalRevenue = function (array) {
+  return array.reduce(total, {totalPrice: 0});
+};
